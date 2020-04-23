@@ -1,0 +1,11 @@
+scalalearning.iml
+src/
+.idea
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/spark_demo.iml
+.idea/workspace.xml
+.idea/libraries/
+src/main/java/spark/demo/out/
+target/generated-sources/
+target/classes/
