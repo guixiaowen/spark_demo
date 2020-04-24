@@ -6,6 +6,8 @@ src/
 .idea/spark_demo.iml
 .idea/workspace.xml
 .idea/libraries/
+.idea/uiDesigner.xml
+.idea/vcs.xml
 src/main/java/spark/demo/out/
 target/generated-sources/
 target/classes/
