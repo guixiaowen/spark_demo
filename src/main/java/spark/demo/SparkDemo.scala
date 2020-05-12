@@ -13,14 +13,18 @@ object SparkDemo {
     kvRdd.saveAsTextFile("/Users/guixiaowen/IdeaProjects/spark_demo/src/main/java/spark/demo/out")
     sparkContext.stop();
 
-    val a = sparkContext.parallelize(List("dog", "tiger", "lion", "cat", "panther", "eagle"), 2)
+    var a = sparkContext.parallelize(List("dog", "tiger", "lion", "cat", "panther", "eagle"), 2)
     val b = a.map(x => (x.length, x))
     b.mapValues("x" + _ + "x").collect
     b.sortBy(x => x==2)
 
+
+
+//    a = sparkContext.parallelize(List("dog","cat","gnu","salmon","rabbit","turkey","wolf","bear","bee"), 3)
+//    val b = sparkContext.parallelize(List(1,1,2,2,2,1,2,2,2), 3)
+//    val c = b.zip(a)
+//    val d = c.combineByKey(List(_), (x:List[String], y:String) => y :: x, (x:List[String], y:List[String]) => x ::: y)
+//    d.collect
   }
-
-
-
 
 }
