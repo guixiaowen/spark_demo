@@ -12,6 +12,15 @@ object SparkDemo {
     val kvRdd = distFile.flatMap(_.split(" ")).map((_, 1)).reduceByKey(_ + _)
     kvRdd.saveAsTextFile("/Users/guixiaowen/IdeaProjects/spark_demo/src/main/java/spark/demo/out")
     sparkContext.stop();
+
+    val a = sparkContext.parallelize(List("dog", "tiger", "lion", "cat", "panther", "eagle"), 2)
+    val b = a.map(x => (x.length, x))
+    b.mapValues("x" + _ + "x").collect
+    b.sortBy(x => x==2)
+
   }
+
+
+
 
 }
