@@ -12,7 +12,7 @@ object FileDemo {
     val sparkContext = new SparkContext(sparkConf);
 
     var num = 0
-    val fileRDD = sparkContext.textFile("/Users/guixiaowen/IdeaProjects/spark_demo/src/main/java/spark/demo2/file/", 1)
+    val fileRDD = sparkContext.textFile("/Users/guixiaowen/IdeaProjects/spark_demo/src/main/java/spark/demo2/file/", 3)
     val lineRDD = fileRDD.
 //                    filter(x => x.length>0 && x.split(",") == 4).
                     map(x => (x.split(",")(2).toInt, x)).
